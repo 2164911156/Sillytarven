@@ -2813,7 +2813,7 @@ var r = {
       const s = Number(o.潜力提升 || 0);
       if (Number.isFinite(s) && 0 !== s) {
         const n = Number(e.核心状态._潜力) || 0;
-        e.核心状态._潜力 = Math.min(20, Math.max(0, n + s * i));
+        e.核心状态._潜力 = Math.min(30, Math.max(0, n + s * i));
       }
       return { changed: !0, summary: C(n, a) };
     }
@@ -45430,7 +45430,7 @@ var r = {
               case "grand_potential": {
                 const e = Wa([0.1, 0.2, 0.3]),
                   a = Number(n.核心状态._潜力 || 5),
-                  t = Math.min(20, Number((a + e).toFixed(2))),
+                  t = Math.min(30, Number((a + e).toFixed(2))),
                   r = Number((t - a).toFixed(2));
                 return (
                   (n.核心状态._潜力 = t),
@@ -45607,7 +45607,7 @@ var r = {
                   const t = n.stat_data.核心状态._潜力 ?? 0,
                     r = Number(t) || 0,
                     o = Number(e.effect.permanent._潜力) || 0;
-                  if ("con_p_6" === e.id && r >= 9.8)
+                  if ("con_p_6" === e.id && r >= 30)
                     return void (
                       "undefined" != typeof toastr &&
                       toastr.warning(
