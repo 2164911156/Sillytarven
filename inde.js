@@ -5219,7 +5219,7 @@ var e = {
                       .prefault(0),
                     _潜力: z.coerce
                       .number()
-                      .transform((e) => n(e, 5, 10))
+                      .transform((e) => n(e, 5, 30))
                       .prefault(5),
                   })
                   .prefault({}),
